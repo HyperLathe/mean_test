@@ -18,7 +18,7 @@ mongoose.Promise = global.Promise;
 //connect to mongo db:
 
 // mongoose.connect('mongodb://localhost/todo-api')
-mongoose.connect('mongodb://test_user_rich:H2s04_db@ds249025.mlab.com:49025/mean_crud_app')
+mongoose.connect('mongodb://test_user_rich:pwrd@ds249025.mlab.com:49025/mean_crud_app')
   .then(() =>  console.log('connection succesful!!'))
   .catch((err) => console.error(err));
 
