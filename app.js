@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 // load mongoose package
 var mongoose = require('mongoose');
+var http = require('http');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -20,15 +21,6 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://test_user_rich:H2s04_db@ds249025.mlab.com:49025/mean_crud_app')
   .then(() =>  console.log('connection succesful!!'))
   .catch((err) => console.error(err));
-
-
-//   MongoClient.connect('mongodb://test_database_01:H2s04_db@ds135069.mlab.com:35069/quotes-test', (err, database) => {
-//     if (err) return console.log(err);
-//     db = database;
-//     app.listen(3000, () => {
-//         console.log('listening on 3000');
-//     });
-// });
 
 var app = express();
 
